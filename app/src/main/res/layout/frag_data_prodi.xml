@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="Daftar Nama Program Studi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:id="@+id/textInputLayout">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Program Studi" android:id="@+id/edNamaProdi"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+            android:text="Insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInsert"
+            android:drawableLeft="@android:drawable/ic_menu_add"
+            style="@android:style/Widget.Material.Button.Borderless.Small" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/btnUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintHorizontal_chainStyle="spread_inside" android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
+            app:layout_constraintStart_toEndOf="@+id/btnInsert" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete" app:layout_constraintTop_toTopOf="@+id/btnInsert"/>
+    <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            android:drawableLeft="@android:drawable/ic_menu_delete"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
+            app:layout_constraintStart_toEndOf="@+id/btnUpdate" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/btnUpdate"/>
+    <ListView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lsProdi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnUpdate" app:layout_constraintBottom_toBottomOf="parent"
+    />
+</android.support.constraint.ConstraintLayout>
